@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+TeamGoal.create(required_goals: {'A'=>5, 'B'=>10, 'C'=>15, 'Cuauh'=>20})
