@@ -1,24 +1,11 @@
-# README
+# 
+To run:
+1 bundle
+2 rails db:create db:migrate db:seed
+3 rails s
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+send a POST request to localhost:3000/salary
+with the mentioned json on the test
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please run seeds before sending the request, in the seeds is the team goals creation.
+The app is made for using several teams.
