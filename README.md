@@ -8,4 +8,4 @@ send a POST request to localhost:3000/salary
 with the mentioned json on the test
 
 Please run seeds before sending the request, in the seeds is the team goals creation.
-The app structure supports calculating several teams salaries and not just resuelve.
+The app architecture supports calculating several teams salaries and not just resuelve.
