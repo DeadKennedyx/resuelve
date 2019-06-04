@@ -4,9 +4,11 @@ class Player < ApplicationRecord
   def self.complete_salaries
     players = []
     Player.all.each do |x|
-      players << { 'nombre': x.name,'goles': x.goals,
-                   'bono': x.bonus, 'equipo': x.team.name,
-                   'sueldo_completo': x.complete_salary }
+      players << { 'nombre': x.name, 'goles_minimos': x.team.team_goal.required_goals[x.level],
+                   'goles': x.goals, 'sueldo': x.salary,
+                   'bono': x.bonus, 'sueldo_completo': x.complete_salary,
+                   'equipo': x.team.name
+                 }
     end
     return players
   end

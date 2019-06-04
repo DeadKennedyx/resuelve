@@ -1,7 +1,7 @@
 class PlayersController < ApplicationController
   def total_salary
-    set_players_and_teams(params['_json'])
     begin
+      set_players_and_teams(params['_json'])
       render json: Player.complete_salaries, status: :ok
     rescue => error
       render json: { error: error }, status: :bad_request
@@ -22,7 +22,6 @@ class PlayersController < ApplicationController
         team.team_goal = new_team_goal
       end
       Player.find_or_create_by(name: player_data['nombre']) do |player|
-        binding.pry
         player.goals = player_data['goles']
         player.salary = player_data['sueldo']
         player.bonus = player_data['bono']
