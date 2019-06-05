@@ -16,7 +16,6 @@ class PlayersController < ApplicationController
 
   def set_players_and_teams(data)
     data.each do |player_data|
-      @player_data = data
       team = Team.find_or_create_by(name: player_data['equipo']) do |team|
         new_team_goal = TeamGoal.first.dup
         team.team_goal = new_team_goal
